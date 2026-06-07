@@ -1,4 +1,4 @@
-ARG CLICKHOUSE_BACKUP_VERSION=2.7.0
+ARG CLICKHOUSE_BACKUP_VERSION=2.7.1
 FROM altinity/clickhouse-backup:${CLICKHOUSE_BACKUP_VERSION}
 
 RUN apk add --no-cache curl ca-certificates gnupg && \
