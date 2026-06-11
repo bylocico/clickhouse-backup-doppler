@@ -6,14 +6,14 @@ Docker image packaging [clickhouse-backup](https://github.com/Altinity/clickhous
 
 The Docker image version tracks the upstream `altinity/clickhouse-backup` image version.
 
-For example, `ghcr.io/bylocico/clickhouse-backup-doppler:2.7.1` contains `altinity/clickhouse-backup:2.7.1` with the Doppler CLI installed.
+For example, `ghcr.io/bylocico/clickhouse-backup-doppler:2.7.2` contains `altinity/clickhouse-backup:2.7.2` with the Doppler CLI installed.
 
 A scheduled workflow checks Docker Hub daily for new releases, builds and tests each one, and opens an auto-merge PR.
 
 ## Usage
 
 ```bash
-docker pull ghcr.io/bylocico/clickhouse-backup-doppler:2.7.1
+docker pull ghcr.io/bylocico/clickhouse-backup-doppler:2.7.2
 ```
 
 ### With Doppler
@@ -21,7 +21,7 @@ docker pull ghcr.io/bylocico/clickhouse-backup-doppler:2.7.1
 ```bash
 docker run \
   -e DOPPLER_TOKEN=dp.st.xxx \
-  ghcr.io/bylocico/clickhouse-backup-doppler:2.7.1 \
+  ghcr.io/bylocico/clickhouse-backup-doppler:2.7.2 \
   list
 ```
 
@@ -30,7 +30,7 @@ docker run \
 ```yaml
 services:
   clickhouse-backup:
-    image: ghcr.io/bylocico/clickhouse-backup-doppler:2.7.1
+    image: ghcr.io/bylocico/clickhouse-backup-doppler:2.7.2
     environment:
       - DOPPLER_TOKEN=${DOPPLER_TOKEN}
 ```
@@ -76,7 +76,7 @@ node scripts/update-version.mjs --list-newer
 Retarget to a specific version:
 
 ```bash
-node scripts/update-version.mjs --version 2.7.1
+node scripts/update-version.mjs --version 2.7.2
 ```
 
 ## Publishing
